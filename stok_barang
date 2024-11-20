@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef struct {
+    char nama[50];
+    int stok;
+} barang;
+
+barang brg[100];
+int jumlah_barang = 0;
+
+void stok_brg(){
+	int i;
+    printf("\nDaftar Stok Barang:\n");
+    printf("========================\n");
+    for(i = 0; i < jumlah_barang; i++) {
+        printf("Barang ke-%d : %s, Jumlah: %d\n", i+1, brg[i].nama, brg[i].stok);
+    }
+}
