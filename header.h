@@ -35,5 +35,8 @@ void simpan_akun(struct Akun akun);
 void daftar_akun();
 int login();
 void login_atau_daftar();
+void buka_file_berdasarkan_role();
+void menu_user();
+void menu_admin();
 
 #endif
