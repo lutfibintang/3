@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
-typedef struct {
-    char nama[50];
-    int stok;
-} barang;
-
-barang brg[100];
-int jumlah_barang = 0;
+#include "header.h"
 
 void stok_brg(){
 	int i;
