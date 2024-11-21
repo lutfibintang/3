@@ -13,3 +13,6 @@ typedef struct {
     float harga;
     int stok;
 } barang;
+
+barang brg[100];
+int jumlah_barang = 0;
