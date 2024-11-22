@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+#include "header.h"
+
+void tambah_barang(){
+	printf("Masukkan nama barang: ");
+	scanf("%s", &brg[jumlah_barang].nama);
+	printf("Jumlah: ");
+	scanf("%d", &brg[jumlah_barang].stok);
+	jumlah_barang++;
+	printf("Barang berhasil ditambahkan!\n");    
+    }

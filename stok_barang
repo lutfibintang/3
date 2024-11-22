@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include "header.h"
+
+void tambah_stok(struct Barang daftarBarang[], int jumlah_barang) {
+    char id[10];
+    int i, jumlah;
+    printf("Masukkan ID barang: ");
+    scanf("%s", id);
+    printf("Masukkan jumlah stok yang ingin ditambah: ");
+    scanf("%d", &jumlah);
+    for (i = 0; i < jumlah_barang; i++) {
+        if (strcmp(daftarBarang[i].id, id) == 0) {
+            daftarBarang[i].stok += jumlah;
+            tulis_barang(daftarBarang, jumlah_barang); // Menyimpan perubahan ke file
+            printf("Stok berhasil ditambahkan.\n");
+            return;
+        }
+    }
+	printf("Barang dengan ID %s tidak ditemukan.\n", id);
+}

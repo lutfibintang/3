@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include "header.h"
+
+void kurangi_stok() {
+    char nama[20];
+    int i, minus;
+
+    printf("Masukkan nama barang: ");
+    scanf("%s", nama);
+    printf("Masukkan jumlah stok yang ingin dikurangi: ");
+    scanf("%d", &minus);
+
+    for (i = 0; i < jumlah_barang; i++) {
+        if (strcmp(daftarBarang[i].nama, nama) == 0) {
+            if (daftarBarang[i].stok < minus) {
+                printf("Stok tidak cukup.\n");
+              
+			    return;
+            }
+            daftarBarang[i].stok -= minus;
+            tulis_barang();
+            printf("Stok berhasil dikurangi.\n");
+
+            return;
+        }
+    }
+    printf("Barang tidak ditemukan.\n");
+}
