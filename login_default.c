@@ -11,14 +11,15 @@ void simpan_akun(struct Akun akun) {
     }
 
     // Menyimpan data akun (username dan password) ke dalam file
-    fprintf(file, "%s %s\n", akun.username, akun.password);
+    fprintf(file, "%s,%s\n", akun.username, akun.password);
 
     fclose(file);
-    printf("\n====== Akun berhasil disimpan. ======\n");
+    printf("Akun berhasil disimpan.\n");
 }
 
 // Fungsi untuk memverifikasi akun saat login
-int login(char *role) {
+// Fungsi untuk login sebagai user (menggunakan akun.txt)
+int login_user(char *role) {
     char username[20], password[20];
     struct Akun akun;
     FILE *file = fopen("akun.txt", "r");
@@ -28,27 +29,23 @@ int login(char *role) {
         return 0;
     }
 
-    printf("Username: ");
+    printf("\n====== SISTEM LOGIN USER ======\n");
+    printf("Masukkan Username: ");
     scanf("%s", username);
-    printf("Password: ");
+    printf("Masukkan Password: ");
     scanf("%s", password);
 
-    // Membaca data akun dari file dan memverifikasi login
-    while (fscanf(file, "%[^,] %s\n", akun.username, akun.password) != EOF) {
-        // Pengecekan login sesuai dengan role yang diminta (admin atau pengguna biasa)
+    while (fscanf(file, "%[^,],%s\n", akun.username, akun.password) != EOF) {
         if (strcmp(username, akun.username) == 0 && strcmp(password, akun.password) == 0) {
             fclose(file);
-            if (strcmp(username, "admin") == 0) {
-                strcpy(role, "admin");
-            } else {
-                strcpy(role, "user");
-            }
+            strcpy(role, "user");  // Set role sebagai user
+            printf("\n====== Login berhasil sebagai User. ======\n\n");
             return 1;
         }
     }
 
     fclose(file);
-    printf("\n====== Username atau password salah. ======\n");
+    printf("====== Username atau password salah. ======\n\n");
     return 0;
 }
 
@@ -56,7 +53,7 @@ int login(char *role) {
 void daftar_akun() {
     struct Akun akun;
 
-    printf("Daftar Akun Baru\n");
+    printf("\n\n====== Daftar Akun Baru ====== \n");
 
     // Input username dan password
     printf("Masukkan Username: ");

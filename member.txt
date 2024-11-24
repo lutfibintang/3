@@ -1,0 +1,5 @@
+Yahaha,A10,97
+IzumiNaruya,A11,11
+Udean,A12,0
+MrV,A13,15
+v,A14,0

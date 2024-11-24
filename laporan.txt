@@ -1,0 +1,42 @@
+Nama Member: IzumiNaruya
+Barang: sabun, Jumlah: 3, Total Harga: 3000.00, Poin: 0
+
+Nama Member: Yahaha
+Barang: sabun, Jumlah: 2, Total Harga: 2000.00, Poin: 0
+
+Nama Member: Yahaha
+Barang: sabun, Jumlah: 10, Total Harga: 10000.00, Poin: 0
+
+Nama Member: IzumiNaruya
+Barang: sabun, Jumlah: 10, Total Harga: 10000.00, Poin: 0
+
+Nama Member: Yahaha
+Barang: sabun, Jumlah: 2, Total Harga: 2000.00, Poin: 0
+
+Nama Member: Yahaha
+Barang: sabun, Jumlah: 2, Total Harga: 2000.00, Poin: 0
+
+Nama Member: Yahaha
+Barang: sabun, Jumlah: 5, Total Harga: 5000.00, Poin: 5
+
+Nama Member: IzumiNaruya
+Barang: sabun, Jumlah: 2, Total Harga: 2000.00, Poin: 2
+
+Nama Member: IzumiNaruya
+Barang: sabun, Jumlah: 3, Total Harga: 3000.00, Poin: 3
+
+Nama Member: IzumiNaruya
+Barang: sabun, Jumlah: 5, Total Harga: 5000.00, Poin: 5
+
+Nama Member: Yahaha
+Barang: Aqua, Jumlah: 10, Total Harga: 40000.00, Poin: 40
+
+Nama Member: Yahaha
+Barang: Pocari-Sweat, Jumlah: 1, Total Harga: 11000.00, Poin: 91
+
+Nama Member: MrV
+Barang: deterjen, Jumlah: 5, Total Harga: 10000.00, Poin: 10
+
+Nama Member: MrV
+Barang: sabun, Jumlah: 5, Total Harga: 5000.00, Poin: 15
+

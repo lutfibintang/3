@@ -2,8 +2,8 @@
 #include <string.h>
 #include "header.h"
 
-void kurangi_stok() {
-    char nama[20];
+void kurangi_stok(struct Barang daftarBarang[], int jumlah_barang) {
+    char nama[50];
     int i, minus;
 
     printf("Masukkan nama barang: ");
@@ -15,15 +15,13 @@ void kurangi_stok() {
         if (strcmp(daftarBarang[i].nama, nama) == 0) {
             if (daftarBarang[i].stok < minus) {
                 printf("Stok tidak cukup.\n");
-              
-			    return;
+                return;
             }
             daftarBarang[i].stok -= minus;
-            tulis_barang();
-            printf("Stok berhasil dikurangi.\n");
-
+            tulis_barang(daftarBarang, jumlah_barang);  // Menyimpan perubahan ke file
+            printf("\n====== Stok berhasil dikurangi. ======\n\n");
             return;
         }
     }
-    printf("Barang tidak ditemukan.\n");
+    printf("\n====== Barang dengan nama %s tidak ditemukan. ======\n\n", nama);
 }

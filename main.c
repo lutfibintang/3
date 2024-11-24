@@ -4,39 +4,40 @@
 #include <string.h>
 
 // Fungsi login atau daftar
-void login_atau_daftar(char *role) { // Menambahkan role sebagai parameter
+// Fungsi login atau daftar
+void login_atau_daftar(char *role) {  // Passing role ke fungsi ini
     int pilihan;
 
     // Loop utama login/daftar
     while (1) {
-        printf("===== Sistem Login =====\n");
-        printf("1. Login\n");
-        printf("2. Daftar Akun Baru\n");
-        printf("Masukkan pilihan (1/2): ");
+        printf("\n===== Sistem Login =====\n");
+        printf("1. Login Admin\n");
+        printf("2. Login User\n");
+        printf("3. Daftar Akun Baru\n");
+        printf("0. Keluar\n"); 
+        printf("Masukkan pilihan: ");
         scanf("%d", &pilihan);
-        getchar();
+        getchar();  // Untuk membersihkan buffer input
 
         if (pilihan == 1) {
-            if (login(role)) { // Memastikan role diubah di sini
-                // Setelah login berhasil, tampilkan pesan selamat datang dan arahkan ke menu utama
-                if (strcmp(role, "admin") == 0) {
-                    printf("Selamat datang, Admin!\n");
-                } else {
-                    printf("Selamat datang, Pengguna!\n");
-                }
-                
-                // Keluar dari login_atau_daftar() dan menuju menu utama
-                return; // Menghentikan eksekusi fungsi login_atau_daftar dan melanjutkan ke menu utama
-            } else {
-                printf("Gagal login. Silakan coba lagi.\n");
+            if (login_admin(role)) {
+                break;  // Keluar dari loop jika login berhasil sebagai admin
             }
         } else if (pilihan == 2) {
-            daftar_akun(); // Mendaftar akun baru
+            if (login_user(role)) {
+                break;  // Keluar dari loop jika login berhasil sebagai user
+            }
+        } else if (pilihan == 3) {
+            daftar_akun();  // Daftar akun baru
+        } else if (pilihan == 0) {
+            printf("\n===== Keluar Dari Program. =====");
+            exit(0);  // Keluar
         } else {
             printf("Pilihan tidak valid.\n");
         }
     }
 }
+
 
 // Fungsi utama program
 int main() {

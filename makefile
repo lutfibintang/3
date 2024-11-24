@@ -1,2 +1,2 @@
-	gcc -o launch tambah_barang.c main.c login.c menu_user.c menu_admin.c
+	gcc -o launch diskon.c member.c laporan.c pembayaran.c daftar_barang.c hapus_barang.c tulis_barang.c stok_barang.c kurangi_stok.c baca_barang.c tambah_barang.c main.c login_admin.c login_default.c menu_user.c menu_admin.c
 	./launch

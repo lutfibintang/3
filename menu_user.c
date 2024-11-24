@@ -4,29 +4,37 @@
 #include "header.h"
 
 // Fungsi utama program
-void menu_user(){
+void menu_user() {
     int pilihan;
+    struct Barang daftarBarang[100];  // Array untuk menyimpan barang yang dibaca
+    int jumlah_barang;
+
+    jumlah_barang = baca_barang(daftarBarang);
     // Setelah login berhasil, program akan masuk ke menu utama
     do {
         printf("===== Menu Pengguna =====\n");
-        printf("1. Lihat Barang\n");  // Bisa ditambahkan fungsionalitas lihat barang
-        printf("0. Keluar\n");
-        printf("Masukkan pilihan (1/0): ");
+        printf("1. Lihat Barang\n");
+        printf("2. Pembayaran\n");
+        printf("0. Home\n");
+        printf("Masukkan pilihan: ");
         scanf("%d", &pilihan);
         getchar();
 
         switch (pilihan) {
             case 1:
-                printf("Pengguna melihat barang.\n");
-                // Implementasi untuk melihat barang
+                kategori_barang(daftarBarang, jumlah_barang);
+                break;
+            case 2:
+                kasir();
                 break;
             case 0:
-                printf("Keluar dari program.\n");
+                main();
                 break;
             default:
                 printf("Pilihan tidak valid.\n");
                 break;
-            }
+        }
     } while (pilihan != 0);
-    exit(0);
+
+    exit(0);  // Keluar dari aplikasi setelah selesai
 }

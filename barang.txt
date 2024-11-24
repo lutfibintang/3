@@ -1,3 +1,5 @@
-A10,sabun,10,1000.00
-A19,sampo,10,1000.00
-a,j,2,3.00
+A1 sampo 25 2000.00 10
+A2 sabun 30 1000.00 0
+A4 deterjen 85 2000.00 0
+B2 Aqua 90 4000.00 0
+B4 Pocari-Sweat 9 11000.00 0
